@@ -1,2 +1,2 @@
 # ThePrairieHouse
-Website for The Prairie House, a vacation rental in Wisconsin.
+A new website for The Prairie House, a vacation rental in Wisconsin.
