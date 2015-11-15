@@ -26,7 +26,7 @@
     },
     {
       "menuName": "Wellness Services",
-      "menuURL": ""
+      "menuURL": "wellnessServices/wellnessServices.html"
     },
     {
       "menuName": "Reviews",

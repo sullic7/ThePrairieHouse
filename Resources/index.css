@@ -4,6 +4,12 @@ body {
   padding: 0;
   font-family: 'Palatino Linotype';
 }
+#container {
+  width: 1024px;
+  margin: auto;
+  text-align: center;
+  background-color: #fcf9ce;
+}
 h1 {
   font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
   font-size: 40px;
@@ -19,7 +25,8 @@ li {
   list-style: none;
 }
 img {
-  max-width: 300px;
+  max-width: 400px;
+  padding-top: 8px;
 }
 em {
   font-size: 120%;
@@ -35,15 +42,21 @@ a {
   color: #800000;
   padding-left: 18px;
 }
-.barText {
-  padding: 5px 200px 5px 200px;
+.Bar > div {
+	display: inline;
+}
+div.barText {
+  display: inline-block;
+  vertical-align: top;
+  margin: auto;
+  width: 600px;
 }
 .barText ul {
 	padding: 0;
 }
 .title {
   color: #800000;
-  font-variant: uppercase;
+  /*font-variant: uppercase;*/
   font-weight: bold;
   font-size: 17px;
 }
@@ -94,10 +107,4 @@ h3 {
 #menuBar li {
   padding-left: 1em;
   display: inline;
-}
-#container {
-  width: 1024px;
-  margin: auto;
-  text-align: center;
-  background-color: #fcf9ce;
 }

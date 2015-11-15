@@ -1,8 +1,8 @@
 function getJS(fileName) {
   return $.getJSON(fileName, function(data) { 
-    var output = '<div><h2>' + data.announcements.header + '</h2><ul>';
+    var output = '<h2>' + data.announcements.header + '</h2><ul>';
     $.each(data.announcements.content, function(i, item) {
-      output += '<li class="title">' + item.title + '</li>';
+      output += '<div><li class="title">' + item.title + '</li>';
       output += '<li class="date">' + item.date + '</li>';
       output += '<li class="text">' + item.text + '</li></div>';
     });
@@ -10,9 +10,9 @@ function getJS(fileName) {
     self.focus();
     $('#announcements').html(output);
 
-    var output2 = '<div><h2>' + data.specialOffers.header + '</h2><ul>';
+    var output2 = '<h2>' + data.specialOffers.header + '</h2><ul>';
     $.each(data.specialOffers.content, function(i, item) {
-      output2 += '<li class="title">' + item.title + '</li>';
+      output2 += '<div><li class="title">' + item.title + '</li>';
       output2 += '<li class="date">' + item.date + '</li>';
       output2 += '<li class="text">' + item.text + '</li></div>';
     });
@@ -20,9 +20,9 @@ function getJS(fileName) {
     self.focus();
     $('#specialOffers').html(output2);
 
-    var output3 = '<div><h2>' + data.upcomingEvents.header + '</h2><ul>';
+    var output3 = '<h2>' + data.upcomingEvents.header + '</h2><ul>';
     $.each(data.upcomingEvents.content, function(i, item) {
-      output3 += '<li class="title">' + item.title + '</li>';
+      output3 += '<div><li class="title">' + item.title + '</li>';
       output3 += '<li class="date">' + item.date + '</li>';
       output3 += '<li class="text">' + item.text + '</li></div>';
     });
