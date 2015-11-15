@@ -43,7 +43,10 @@ a {
   padding-left: 18px;
 }
 .Bar > div {
-	display: inline;
+  display: inline;
+}
+.Bar {
+  border-left: solid black 3px;
 }
 div.barText {
   display: inline-block;
@@ -56,7 +59,6 @@ div.barText {
 }
 .title {
   color: #800000;
-  /*font-variant: uppercase;*/
   font-weight: bold;
   font-size: 17px;
 }
@@ -78,8 +80,8 @@ div.barText {
 /*menu bar*/
 #container > div:nth-child(2) {
   background-color: #ddeeaa;
-  border-top: solid black 3px;
-  border-bottom: solid black 3px;
+  border: solid black 3px;
+  border-left: none;
   text-align: center;
   font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
   font-size: 18px;
@@ -88,8 +90,8 @@ div.barText {
 /*footer bar*/
 #container > div:last-child {
   background-color: #ddeeaa;
-  border-top: solid black 3px;
-  border-bottom: solid black 3px;
+  border: solid black 3px;
+  border-left: none;
   padding: 5px;
   margin: 0;
 }
