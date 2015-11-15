@@ -97,8 +97,13 @@ h3 {
   margin: 0;
   color: #800000;
 }
-#footer p {
+.lastBar {
+  padding-bottom: 15px;
+}
+span {
   margin: 0;
+  padding: 0;
+  display: block;
 }
 #menuBar ul {
   padding: 5px 18px 5px 0;
