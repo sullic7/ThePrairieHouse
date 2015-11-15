@@ -2,27 +2,27 @@
   "menuBar": [
     {
       "menuName": "Home",
-      "menuURL": ""
+      "menuURL": "index.html"
     },
     {
       "menuName": "The House",
-      "menuURL": ""
+      "menuURL": "theHouse/theHouse.html"
     },
     {
       "menuName": "Gallery",
-      "menuURL": ""
+      "menuURL": "Gallery/gallery.html"
     },
     {
       "menuName": "The Area",
-      "menuURL": ""
+      "menuURL": "theArea/theArea.html"
     },
     {
       "menuName": "Booking",
-      "menuURL": ""
+      "menuURL": "Booking/booking.html"
     },
     {
       "menuName": "Events",
-      "menuURL": ""
+      "menuURL": "Events/events.html"
     },
     {
       "menuName": "Wellness Services",
@@ -30,11 +30,11 @@
     },
     {
       "menuName": "Reviews",
-      "menuURL": ""
+      "menuURL": "Reviews/reviews.html"
     },
     {
       "menuName": "Directions",
-      "menuURL": ""
+      "menuURL": "Directions/directions.html"
     }
   ]
 }
