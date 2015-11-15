@@ -1,3 +1,33 @@
+body {
+  background-color: #f5e583;
+  margin: 0;
+  padding: 0;
+}
 li {
-	list-style: none;
+  list-style: none;
+}
+/*if width of screen is greater than the header?*/
+#container {
+  width: 80%;
+  float: right;
+  text-align: center;
+}
+#header {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 300px;
+}
+#header {
+  background-color: #fcf9ce;
+}
+#header img {
+  height: 100%;
+  float: left;
+}
+#container div:nth-child(2n+1) {
+  background-color: #fcf9ce;
+}
+#container div:nth-child(2n) {
+	background-color: white;
 }
