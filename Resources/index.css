@@ -1,16 +1,11 @@
 body {
-  background-color: #f5e583;
+  background: white url('Images/sidebar.jpg') no-repeat 50% fixed top;
+  background-size: auto 100%;
   margin: 0;
   padding: 0;
 }
 li {
   list-style: none;
-}
-/*if width of screen is greater than the header?*/
-#container {
-  width: 80%;
-  float: right;
-  text-align: center;
 }
 #header {
   text-align: center;
@@ -30,4 +25,27 @@ li {
 }
 #container div:nth-child(2n) {
 	background-color: white;
+	padding-top: 5px;
+}
+#container div:nth-child(2) {
+	background-color: #ddeeaa;
+	border-top: solid black 3px;
+	border-bottom: solid black 3px;
+	text-align: left;
+	clear: both;
+}
+#menuBar ul {
+	padding-bottom: 5px;
+	padding-left: 0;
+	margin: 0;
+}
+#menuBar li {
+	padding-left: 1em;
+	display: inline;
+}
+#container {
+  width: 1024px;
+  margin: auto;
+  text-align: center;
+  background-color: #fcf9ce;
 }

@@ -27,11 +27,11 @@
     {
       "menuName": "Wellness Services",
       "menuURL": ""
-    }
+    },
     {
       "menuName": "Reviews",
       "menuURL": ""
-    }
+    },
     {
       "menuName": "Directions",
       "menuURL": ""
