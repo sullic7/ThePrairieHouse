@@ -26,7 +26,7 @@
       "header": "Upcoming Events",
       "content": [
         {
-          "title": "",
+          "title": "None at this time",
           "date": "",
           "text": ""
         }

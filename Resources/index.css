@@ -18,6 +18,12 @@ h2 {
 li {
   list-style: none;
 }
+img {
+  max-width: 300px;
+}
+em {
+  font-size: 120%;
+}
 a:hover {
   text-shadow: 1px 1px;
 }
@@ -31,6 +37,9 @@ a {
 }
 .barText {
   padding: 5px 200px 5px 200px;
+}
+.barText ul {
+	padding: 0;
 }
 .title {
   color: #800000;

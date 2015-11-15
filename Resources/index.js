@@ -58,23 +58,66 @@ function getMenuBar(fileName) {
 
 $(document).ready(function() {
   var page = document.getElementsByTagName("body")[0].title;
-  var indexJson = "";
-  var menuJson = "";
-  if(page!="Home") {
-    indexJson += ".";
-    menuJson += ".";
-  }
-  indexJson += "./Resources/indexJson.js";
-  menuJson += "./Resources/menuJson.js";
-  
-  $.when(
-    getJS(indexJson),
-    getMenuBar(menuJson)
-  ).then(function(indexJ, menuJ) {
+  var menuJson = "../Resources/menuJson.js";
 
-  }, function() {
+  if(page=="Home") {
+    var pageJson = "./Resources/indexJson.js";
+
+    $.when(
+      getJS(pageJson),
+      getMenuBar("./Resources/menuJson.js")
+      ).then(function(indexJ, menuJ) {}, function() {
+        alert("There was a problem");
+      }
+    );
+  } else if(page=="The House") {
+    $.when(getMenuBar(menuJson)
+      ).then(function(menuJ) {}, function() {
       alert("There was a problem");
     }
-  );
+    );
+  } else if(page=="Gallery") {
+    $.when(getMenuBar(menuJson)
+      ).then(function(menuJ) {}, function() {
+      alert("There was a problem");
+    }
+    );
+  } else if(page=="The Area") {
+    $.when(getMenuBar(menuJson)
+      ).then(function(menuJ) {}, function() {
+      alert("There was a problem");
+    }
+    );
+  } else if(page=="Booking") {
+    $.when(getMenuBar(menuJson)
+      ).then(function(menuJ) {}, function() {
+      alert("There was a problem");
+    }
+    );
+  } else if(page=="Events") {
+    $.when(getMenuBar(menuJson)
+      ).then(function(menuJ) {}, function() {
+      alert("There was a problem");
+    }
+    );
+  } else if(page=="Wellness Services") {
+    $.when(getMenuBar(menuJson)
+      ).then(function(menuJ) {}, function() {
+      alert("There was a problem");
+    }
+    );
+  } else if(page=="Reviews") {
+    $.when(getMenuBar(menuJson)
+      ).then(function(menuJ) {}, function() {
+      alert("There was a problem");
+    }
+    );
+  } else if(page=="Directions") {
+    $.when(getMenuBar(menuJson)
+      ).then(function(menuJ) {}, function() {
+      alert("There was a problem");
+    }
+    );
+  }
 
 });
