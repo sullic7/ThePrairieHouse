@@ -1,47 +1,84 @@
 body {
-  background: white url('Images/sidebar.jpg') no-repeat 50% fixed top;
-  background-size: auto 100%;
+  background: linear-gradient(to right, #f5e583, #f5e583 , #fcf9ce, #fcf9ce);
   margin: 0;
   padding: 0;
+  font-family: 'Palatino Linotype';
+}
+h1 {
+  font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+  font-size: 40px;
+  font-variant: small-caps;
+  font-weight: bold;
+}
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  font-variant: small-caps;
 }
 li {
   list-style: none;
 }
+.barText {
+  padding: 5px 200px 5px 200px;
+}
+.title {
+  color: #800000;
+  font-variant: uppercase;
+  font-weight: bold;
+  font-size: 17px;
+}
 #header {
+  background: #fcf9ce url('Images/PH_header.jpg') no-repeat top;
+  background-size: 1024px auto;
   text-align: center;
+  background-color: #fcf9ce;
   margin: 0;
   padding: 0;
   height: 300px;
 }
-#header {
+#container > div:nth-child(2n+1) {
   background-color: #fcf9ce;
 }
-#header img {
-  height: 100%;
-  float: left;
+#container > div:nth-child(2n) {
+  background-color: white;
 }
-#container div:nth-child(2n+1) {
-  background-color: #fcf9ce;
+/*menu bar*/
+#container > div:nth-child(2) {
+  background-color: #ddeeaa;
+  border-top: solid black 3px;
+  border-bottom: solid black 3px;
+  text-align: center;
+  padding-right: 18px;
+  padding-bottom: 0;
+  font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+  font-size: 18px;
+  font-style: normal;
+  font-variant: uppercase;
+  font-weight: bold;
 }
-#container div:nth-child(2n) {
-	background-color: white;
-	padding-top: 5px;
+/*footer bar*/
+#container > div:last-child {
+  background-color: #ddeeaa;
+  border-top: solid black 3px;
+  border-bottom: solid black 3px;
+  padding: 5px;
+  margin: 0;
 }
-#container div:nth-child(2) {
-	background-color: #ddeeaa;
-	border-top: solid black 3px;
-	border-bottom: solid black 3px;
-	text-align: left;
-	clear: both;
+h3 {
+  margin: 0;
+  color: #800000;
+}
+#footer p {
+  margin: 0;
 }
 #menuBar ul {
-	padding-bottom: 5px;
-	padding-left: 0;
-	margin: 0;
+  padding-bottom: 5px;
+  padding-left: 0;
+  margin: 0;
 }
 #menuBar li {
-	padding-left: 1em;
-	display: inline;
+  padding-left: 1em;
+  display: inline;
 }
 #container {
   width: 1024px;
