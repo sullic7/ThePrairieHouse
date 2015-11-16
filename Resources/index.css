@@ -26,8 +26,15 @@ li {
 }
 img {
   max-width: 400px;
-  margin-top: 8px;
+  margin-bottom: -5px;
+  vertical-align: center;
   border: 4px solid #800000;
+}
+.right {
+  /*float: right;*/
+}
+.left {
+  /*float: left;*/
 }
 em {
   font-size: 120%;
@@ -53,7 +60,8 @@ div.barText {
   display: inline-block;
   vertical-align: top;
   margin: auto;
-  width: 600px;
+  padding: 0 40px 15px 40px;
+  width: 526px;
 }
 .barText ul {
 	padding: 0;
@@ -99,9 +107,6 @@ div.barText {
 h3 {
   margin: 0;
   color: #800000;
-}
-.lastBar {
-  padding-bottom: 15px;
 }
 span {
   margin: 0;
