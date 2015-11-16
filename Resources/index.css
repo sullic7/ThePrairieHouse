@@ -26,7 +26,8 @@ li {
 }
 img {
   max-width: 400px;
-  padding-top: 8px;
+  margin-top: 8px;
+  border: 4px solid #800000;
 }
 em {
   font-size: 120%;
