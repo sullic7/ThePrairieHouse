@@ -55,6 +55,7 @@ a {
 }
 .Bar {
   border-left: solid black 3px;
+  box-shadow: -5px 0 5px;
 }
 div.barText {
   display: inline-block;
@@ -85,6 +86,7 @@ div.barText {
 }
 #container > div:nth-child(2n) {
   background-color: white;
+  box-shadow: 5px 0 5px;
 }
 /*menu bar*/
 #container > div:nth-child(2) {
@@ -103,6 +105,7 @@ div.barText {
   border-left: none;
   padding: 5px;
   margin: 0;
+  box-shadow: 5px 1px 5px;
 }
 h3 {
   margin: 0;
