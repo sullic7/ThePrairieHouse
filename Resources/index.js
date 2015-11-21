@@ -1,7 +1,7 @@
 function getJS(fileName) {
   return $.getJSON(fileName, function(data) { 
     var output = '<h2>' + data.announcements.header + '</h2><ul>';
-    var maxShow = 0;
+    var maxShow = 2;
     $.each(data.announcements.content, function(i, item) {
       if(i<maxShow){
         output += '<div>';
@@ -67,11 +67,11 @@ function getMenuBar(fileName) {
 
 function showMore(thisVal, hiddenClass) {
   var hidden = document.getElementsByClassName(hiddenClass);
-  $(hidden).toggle("slow");
-  console.log(hidden[0].style.display);
-  if(hidden[0].style.display=='block'){
+  if(thisVal.innerHTML == "Show Older Announcements"){
+    $(hidden).show("slow");
     thisVal.innerHTML = "Hide Announcements";
   } else {
+    $(hidden).hide("slow");
     thisVal.innerHTML = "Show Older Announcements";
   }
 }
