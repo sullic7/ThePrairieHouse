@@ -1,11 +1,14 @@
 function getJS(fileName) {
   return $.getJSON(fileName, function(data) { 
     var output = '<h2>' + data.announcements.header + '</h2><ul>';
-    $.each(data.announcements.content, function(i, item) {
+    var maxLen = 2;
+    var i = 0;
+    while(var item in data.announcements.content) {
       output += '<div><li class="title">' + item.title + '</li>';
       output += '<li class="date">' + item.date + '</li>';
       output += '<li class="text">' + item.text + '</li></div>';
-    });
+      i++;
+    }
     output += '</ul>';
     self.focus();
     $('#announcements').html(output);
