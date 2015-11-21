@@ -1,13 +1,19 @@
 function getJS(fileName) {
   return $.getJSON(fileName, function(data) { 
     var output = '<h2>' + data.announcements.header + '</h2><ul>';
-    var maxLen = 2;
-    var i = 0;
-    while(var item in data.announcements.content) {
-      output += '<div><li class="title">' + item.title + '</li>';
+    var maxShow = 0;
+    $.each(data.announcements.content, function(i, item) {
+      if(i<maxShow){
+        output += '<div>';
+      } else{
+        output += '<div class="hide">';
+      }
+      output += '<li class="title">' + item.title + '</li>';
       output += '<li class="date">' + item.date + '</li>';
       output += '<li class="text">' + item.text + '</li></div>';
-      i++;
+    });
+    if(maxShow<data.announcements.content.length){
+      output += '<div><li class="readMore"><a onclick="showMore(this,&quot;hide&quot;)">Show Older Announcements</a></li></div>';
     }
     output += '</ul>';
     self.focus();
@@ -57,6 +63,17 @@ function getMenuBar(fileName) {
     self.focus();
     $('#menuBar').html(output);
   })
+}
+
+function showMore(thisVal, hiddenClass) {
+  var hidden = document.getElementsByClassName(hiddenClass);
+  $(hidden).toggle("slow");
+  console.log(hidden[0].style.display);
+  if(hidden[0].style.display=='block'){
+    thisVal.innerHTML = "Hide Announcements";
+  } else {
+    thisVal.innerHTML = "Show Older Announcements";
+  }
 }
 
 $(document).ready(function() {
