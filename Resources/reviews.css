@@ -1,0 +1,11 @@
+.review-img {
+  display: inline;
+  width: 100%;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+.Bar a {
+  text-decoration: underline;
+  color: maroon;
+}
