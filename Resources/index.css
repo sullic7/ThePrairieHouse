@@ -49,6 +49,9 @@ a {
   text-decoration: none;
   color: black;
 }
+a.red {
+  color: #800000;
+}
 .bold {
   color: #800000;
   padding-left: 18px;

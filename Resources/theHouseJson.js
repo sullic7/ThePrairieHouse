@@ -1,20 +1,4 @@
 {
-  "features":
-    {
-      "header": "Features",
-      "content": [
-        {
-          "title": "Upstairs",
-          "text": [ 
-          ]
-        },
-        {
-          "title": "Downstairs",
-          "text": [
-          ]
-        }
-      ]
-    },
   "amenities":
     {
       "header": "Amenities",

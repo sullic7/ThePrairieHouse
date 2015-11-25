@@ -41,6 +41,17 @@ function getJS(fileName) {
   })
 }
 
+function getHomeJS(fileName) {
+  return $.getJSON(fileName, function(data) {
+    var output = '<h2>' + data.amenities.header + '</h2>';
+     $.each(data.amenities.content, function(i, item) {
+      output += '<p>' + item + '</p>';
+    });
+    self.focus();
+    $('#amenities').html(output);
+  })
+}
+
 function getMenuBar(fileName) {
   return $.getJSON(fileName, function(data) {
     var output = '<ul>';
@@ -91,8 +102,11 @@ $(document).ready(function() {
       }
     );
   } else if(page=="The House") {
-    $.when(getMenuBar(menuJson)
-      ).then(function(menuJ) {}, function() {
+      var pageJson = "../Resources/theHouseJson.js";
+    $.when(
+      getHomeJS(pageJson),
+      getMenuBar(menuJson)
+      ).then(function(homeJ, menuJ) {}, function() {
       alert("There was a problem");
     }
     );
