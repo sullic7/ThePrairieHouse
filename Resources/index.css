@@ -1,4 +1,5 @@
 body {
+  /*if possible, make gradient have min width of container (1024px)*/
   background: linear-gradient(to right, #f5e583, #f5e583 , #fcf9ce, #fcf9ce);
   margin: 0;
   padding: 0;
