@@ -46,7 +46,7 @@
 			]
 		},
 		{
-			"section": "Local Favorites by Village",
+			"section": "Local Villages",
 			"sectionItems": [
 				{
 

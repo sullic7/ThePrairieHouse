@@ -1,26 +1,30 @@
 body {
   /*if possible, make gradient have min width of container (1024px)*/
-  background: linear-gradient(to right, #f5e583, #f5e583 , #fcf9ce, #fcf9ce);
+  background: linear-gradient(to right, #FFE572, #FFE572 , #FFFCCF, #FFFCCF);
   margin: 0;
   padding: 0;
-  font-family: 'Palatino Linotype';
+  font-family: 'Helvetica Neue' 'Ariel' sans-serif;
 }
 #container {
   width: 1024px;
   margin: auto;
   text-align: center;
-  background-color: #fcf9ce;
+  background-color: #FFFCCF;
 }
 h1 {
-  font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+  /*font-family: Copperplate, 'Copperplate Gothic Light', fantasy;*/
   font-size: 40px;
-  font-variant: small-caps;
-  font-weight: bold;
+  /*font-variant: small-caps;*/
+  /*font-weight: bold;*/
 }
 h2 {
   font-size: 24px;
-  font-weight: bold;
-  font-variant: small-caps;
+  /*font-weight: bold;*/
+  /*font-variant: small-caps;*/
+}
+h3 {
+  margin: 0;
+  color: #800000;
 }
 li {
   list-style: none;
@@ -28,11 +32,12 @@ li {
 img {
   margin-top: 2px;
   margin-bottom: 4px;
-  vertical-align: top;
-  border: 4px solid #800000;
-  max-width: 193px;
+  vertical-align: middle;
+  border: 2px solid #800000;
+  max-width: 195px;
+  /*max-width: 200px;*/
 }
-#home img, #reviews img {
+.oneSide {
   max-width: 400px;
 }
 .readMore {
@@ -46,7 +51,8 @@ em {
   font-size: 120%;
 }
 a:hover {
-  text-shadow: 1px 1px;
+  /*text-shadow: 1px 1px;*/
+  font-weight: bold;
 }
 a {
   text-decoration: none;
@@ -60,19 +66,21 @@ a.red {
   padding-left: 18px;
 }
 .Bar > div {
-  display: inline;
+  display: inline-block;
 }
 .Bar {
   border-left: solid black 3px;
-  box-shadow: -5px 0 5px;
+  /*box-shadow: -5px 0 5px;*/
   position: relative;
 }
 div.barText {
   display: inline-block;
+  vertical-align: top;
   /*position: absolute;*/
   margin: auto;
   padding: 0 40px 15px 40px;
   width: 526px;
+  /*width: 530px;*/
 }
 .barText ul {
 	padding: 0;
@@ -81,7 +89,7 @@ div.image {
   display: inline-block;
   width: 201px;
   /*position: absolute;*/
-  vertical-align: top;
+  vertical-align: middle;
 }
 .image img {
   margin-bottom: 80px;
@@ -98,17 +106,16 @@ div.image {
   background: #fcf9ce url('Images/PH_header.jpg') no-repeat top;
   background-size: 1024px auto;
   text-align: center;
-  background-color: #fcf9ce;
   margin: 0;
   padding: 0;
   height: 300px;
 }
 #container > div:nth-child(2n+1) {
-  background-color: #fcf9ce;
+  /*background-color: #fcf9ce;*/
 }
 #container > div:nth-child(2n) {
   background-color: white;
-  box-shadow: 5px 0 5px;
+  /*box-shadow: 5px 0 5px;*/
 }
 /*menu bar*/
 #container > div:nth-child(2) {
@@ -116,22 +123,19 @@ div.image {
   border: solid black 3px;
   border-left: none;
   text-align: center;
-  font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+  /*font-family: Copperplate, 'Copperplate Gothic Light', fantasy;*/
   font-size: 18px;
-  font-weight: bold;
+  /*font-weight: bold;*/
 }
 /*footer bar*/
 #container > div:last-child {
   background-color: #ddeeaa;
   border: solid black 3px;
   border-left: none;
+  text-align: center;
   padding: 5px;
   margin: 0;
-  box-shadow: 5px 1px 5px;
-}
-h3 {
-  margin: 0;
-  color: #800000;
+  /*box-shadow: 5px 1px 5px;*/
 }
 span {
   margin: 0;
@@ -143,6 +147,7 @@ span {
   margin: 0;
 }
 #menuBar li {
-  padding-left: 1em;
+  /*padding-left: 1em;*/
+  padding-left: 2em;
   display: inline;
 }
