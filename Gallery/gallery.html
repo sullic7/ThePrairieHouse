@@ -29,8 +29,7 @@
 	    $(document).ready(function() {
 		    $(".fancybox").fancybox();
 
-        var dir = "../Resources/Images/";
-        var dir2 = "/prairie/Gallery";
+        var dir = "../Resources/Images/";;
         var fileextension = [".png", ".jpg", ".JPG"];
 
         $.ajax({
@@ -44,7 +43,7 @@
             //List all .png file names in the page
 
             $(data).find("a:contains(" + (fileextension[0]) + "), a:contains(" + (fileextension[1]) + ")").each(function () { // here comes the rest of the function made by Roy M J
-                var filename = this.href.replace(window.location.host, "").replace("http://", "").replace(dir2, "");
+                var filename = this.href.replace(window.location.host, "").replace("http://", "").replace(window.location.path, "");
                 $("#pictures").append("<a class='fancybox' rel='gallery1' href='" + dir + filename + "'>" + "<img src='" + dir + filename + "' alt='' class='gallery-img' /></a>");
             });
           }, error: function(msg) {
