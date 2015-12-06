@@ -4,8 +4,63 @@
     <title>The Prairie House</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link href="../Resources/index.css" rel="stylesheet" type="text/css"/>
-    <script type="text/javascript" src="../Resources/jquery-1.10.2.js"></script>
+    <link href="../Resources/gallery.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="../Resources/index.js"></script>
+
+    <!-- fancybox includes -->
+
+    <!-- Add mousewheel plugin (this is optional) -->
+    <script type="text/javascript" src="../Resources/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+    <!-- Add fancyBox -->
+    <link rel="stylesheet" href="../Resources/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <script type="text/javascript" src="../Resources/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+    <!-- Optionally add helpers - button, thumbnail and/or media -->
+    <link rel="stylesheet" href="../Resources/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+    <script type="text/javascript" src="../Resources/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+    <script type="text/javascript" src="../Resources/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+    <link rel="stylesheet" href="../Resources/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+    <script type="text/javascript" src="../Resources/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+    <script type="text/javascript">
+	    $(document).ready(function() {
+		    $(".fancybox").fancybox();
+
+        var dir = "../Resources/Images/";
+        var dir2 = "/prairie/Gallery"; //I could do some stuff with path and then offsets but ugh
+        var fileextension = [".png", ".jpg", ".JPG"];
+
+        $.ajax({
+
+          //This will retrieve the contents of the folder if the folder is configured as 'browsable'
+          url: dir,
+
+
+
+          success: function (data) {
+            //List all .png file names in the page
+
+            $(data).find("a:contains(" + (fileextension[0]) + "), a:contains(" + (fileextension[1]) + ")").each(function () { // here comes the rest of the function made by Roy M J
+                var filename = this.href.replace(window.location.host, "").replace("http://", "").replace(dir2, "");
+                $("#pictures").append("<a class='fancybox' rel='gallery1' href='" + dir + filename + "'>" + "<img src='" + dir + filename + "' alt='' class='gallery-img' /></a>");
+            });
+          }, error: function(msg) {
+            alert("There was a problem: " + msg.status + " " + msg.statusText);
+          }
+        });
+
+
+
+	    });
+    </script>
+
+
+
+<!-- End fancybox includes -->
+
   </head>
 <!-- Home Page -->
   <body title="Gallery">
@@ -18,20 +73,14 @@
 
       <div class="Bar">
         <div id="welcome" class="barText">
-          <h1>Gallery: Coming Soon</h1>
-        </div>
-      </div>
-      
-      <div class="Bar">
-        <div id="rates" class="barText">
-
+          <h1>Gallery</h1>
         </div>
       </div>
 
-      <div class="Bar">
-        <div id="details" class="barText">
+      <div class="Bar" id = "pictures">
 
-        </div>
+        <!-- Pictures go here -->
+
       </div>
 
       <!-- contains contact information -->
