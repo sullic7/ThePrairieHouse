@@ -1,6 +1,4 @@
 $(document).ready(function() {
-  $(".fancybox").fancybox();
-
   var dir = "../Resources/Images/";
   var dir2 = window.location.pathname.replace("/gallery.html", "")
   var fileextension = [".png", ".jpg", ".JPG"];
@@ -23,4 +21,6 @@ $(document).ready(function() {
       alert("There was a problem: " + msg.status + " " + msg.statusText);
     }
   });
+
+  $(".fancybox").fancybox();
 });
