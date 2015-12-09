@@ -103,7 +103,7 @@ div.image {
   font-size: 17px;
 }
 #header {
-  background: #fcf9ce url('Images/PH_header.jpg') no-repeat top;
+  background: #fcf9ce url('PH_header.jpg') no-repeat top;
   background-size: 1024px auto;
   text-align: center;
   margin: 0;
