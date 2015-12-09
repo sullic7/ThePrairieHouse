@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  $(".fancybox").fancybox();
+
   $(".initial-hide").hide();
 
 
