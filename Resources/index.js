@@ -41,17 +41,6 @@ function getJS(fileName) {
   })
 }
 
-function getHomeJS(fileName) {
-  return $.getJSON(fileName, function(data) {
-    var output = '<h2>' + data.amenities.header + '</h2>';
-     $.each(data.amenities.content, function(i, item) {
-      output += '<p>' + item + '</p>';
-    });
-    self.focus();
-    $('#amenities').html(output);
-  })
-}
-
 function getMenuBar(fileName) {
   return $.getJSON(fileName, function(data) {
     var output = '<ul>';
@@ -76,6 +65,7 @@ function getMenuBar(fileName) {
   })
 }
 
+// when there are more than two announcements, have option to hide or show more than two
 function showMore(thisVal, hiddenClass) {
   var hidden = document.getElementsByClassName(hiddenClass);
   if(thisVal.innerHTML == "Show Older Announcements"){
@@ -101,57 +91,11 @@ $(document).ready(function() {
         alert("There was a problem");
       }
     );
-  } else if(page=="The House") {
-      var pageJson = "../Resources/theHouseJson.js";
-    $.when(
-      getHomeJS(pageJson),
-      getMenuBar(menuJson)
-      ).then(function(homeJ, menuJ) {}, function() {
-      alert("There was a problem");
+    } else {
+      $.when(getMenuBar(menuJson)
+        ).then(function(menuJ) {}, function() {
+        alert("There was a problem");
+      }
+      );
     }
-    );
-  } else if(page=="Gallery") {
-    $.when(getMenuBar(menuJson)
-      ).then(function(menuJ) {}, function() {
-      alert("There was a problem");
-    }
-    );
-  } else if(page=="The Area") {
-    $.when(getMenuBar(menuJson)
-      ).then(function(menuJ) {}, function() {
-      alert("There was a problem");
-    }
-    );
-  } else if(page=="Booking") {
-    $.when(getMenuBar(menuJson)
-      ).then(function(menuJ) {}, function() {
-      alert("There was a problem");
-    }
-    );
-  } else if(page=="Events") {
-    $.when(getMenuBar(menuJson)
-      ).then(function(menuJ) {}, function() {
-      alert("There was a problem");
-    }
-    );
-  } else if(page=="Wellness Services") {
-    $.when(getMenuBar(menuJson)
-      ).then(function(menuJ) {}, function() {
-      alert("There was a problem");
-    }
-    );
-  } else if(page=="Reviews") {
-    $.when(getMenuBar(menuJson)
-      ).then(function(menuJ) {}, function() {
-      alert("There was a problem");
-    }
-    );
-  } else if(page=="Directions") {
-    $.when(getMenuBar(menuJson)
-      ).then(function(menuJ) {}, function() {
-      alert("There was a problem");
-    }
-    );
-  }
-
 });
